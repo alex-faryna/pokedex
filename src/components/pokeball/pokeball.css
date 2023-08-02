@@ -1,0 +1,43 @@
+.simple-pokeball {
+    --pokeball-size: 300px;
+    position: relative;
+    width: var(--pokeball-size);
+    aspect-ratio: 1;
+    background: #fff;
+    border: calc(var(--pokeball-size) / 20) solid #000;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.simple-pokeball::before,
+.simple-pokeball::after {
+    left: 0;
+    content:"";
+    position: absolute;
+    width: 100%;
+}
+.simple-pokeball::before {
+    background: red;
+    height: 50%;
+}
+.simple-pokeball::after {
+    top: calc(50% - var(--pokeball-size) / 40);
+    height: calc(var(--pokeball-size) / 20);
+    background: #000;
+}
+
+.simple-pokeball .pokeball-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: calc(var(--pokeball-size) * 6 / 20);
+    height: calc(var(--pokeball-size) * 6 / 20);
+    border-radius: 50%;
+    background: white;
+    z-index: 10;
+    border: calc(var(--pokeball-size) / 20) solid #fff;
+    box-shadow: 0 0 0 calc(var(--pokeball-size) / 20) black;
+}
