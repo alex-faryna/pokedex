@@ -16,6 +16,10 @@
 .device-loader > * {
   width: 100%;
   position: absolute;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .device-loader .top {
@@ -25,8 +29,6 @@
   height: calc(50% + 10px); /* + (var(--pokeball-size) / 20) */
   border-bottom: 10px solid #000;
   background: #ccc;
-  display: flex;
-  flex-direction: column;
   justify-content: flex-end;
   z-index: 1;
   transition: top 1s ease-in-out 0s;
@@ -34,16 +36,16 @@
 
 .device-loader .bottom {
   background: #ccc;
-  height: 50%;
+  height: calc(50% + 0px);
   bottom: 0;
   left: 0;
   right: 0;
   border-top: 10px solid #000;
-  transition: bottom 1s ease-in-out 0.05s;
+  z-index: 0;
+  transition: bottom 1s ease-in-out 0s;
 }
 
 .device-loader .top .pokeball-upper-half {
-  margin: 0 auto;
   width: var(--pokeball-size);
   height: calc(var(--pokeball-size) / 2);
   border-top-right-radius: calc(var(--pokeball-size) * 11 / 20);
@@ -67,31 +69,41 @@
   margin-bottom: calc(var(--pokeball-size) * -4 / 19);
 }
 
+.device-loader .bottom .pokeball-lower-border {
+  height: 5px;
+  width: 100%;
+  background: black;
+}
+
 .device-loader .bottom .pokeball-lower-half {
-  margin: -5px auto 0;
+  margin-top: -5px;
   width: var(--pokeball-size);
   height: calc(var(--pokeball-size) / 2);
   border-bottom-left-radius: calc(var(--pokeball-size) * 11 / 20);
   border-bottom-right-radius: calc(var(--pokeball-size) * 11 / 20);
   background: white;
-  border: 10 solid #000; /* background: white;*/
-  padding: 10px;
-
-  border-top: calc(var(--pokeball-size) / 40) solid #000;
+  border: calc(var(--pokeball-size) / 20) solid #000;
+  border-top-width: 0;
+  /* if we add border top then black line appears */
+  /* border-top: calc(var(--pokeball-size) / 40) solid #000; */
 }
 
+
+
 .device-loader.animation .top {
-  top: -100px;
+  top: -150px;
 }
 
 .device-loader.animation .bottom {
   bottom: -100px;
 }
 
-/*.device-loader.animation .bottom .pokeball-lower-half {
-  border-top: calc(var(--pokeball-size) / 40) solid #000;
-}*/
+/*
 
+.device-loader.animation .bottom .pokeball-lower-half {
+  border-top: calc(var(--pokeball-size) / 40) solid #000;
+}
+*/
 
 /*
 .pokeball {

@@ -24,7 +24,9 @@ function DeviceLoaderPanel() {
       </div>
     </div>
     <div className='bottom'>
-      <div className='pokeball-lower-half' />
+      <div className='pokeball-lower-half' >
+        <div className='pokeball-lower-border'/>
+      </div>
     </div>
   </div>
 }
