@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { PokedexDeviceLoadingContext } from './utils/pokedexDeviceLoadingContext';
-import {SimplePokeBall} from "./components/pokeball/pokeball";
+import { PokedexCover } from './components/pokedex-cover/pokedex-cover';
 
 function Test1() {
   const context = useContext(PokedexDeviceLoadingContext);
@@ -14,38 +14,13 @@ function Test2() {
   return <span onClick={() => context.setLoading(false)}>Hello 2</span>
 }
 
-function DeviceLoaderPanel() {
-  const [animation, setAnimation] = useState(false);
-
-  return <div className={`device-loader ${animation ? 'animation' : ''}`} onClick={() => setAnimation(!animation)}>
-    <div className='top'>
-      <div className='pokeball-upper-half'>
-        <div className='pokeball-button' />
-      </div>
-    </div>
-    <div className='bottom'>
-      <div className='pokeball-lower-half' >
-        <div className='pokeball-lower-border'/>
-      </div>
-    </div>
-  </div>
-}
-
-function PokeBall() {
-  return <div className="pokeball">
-    <div className="pokeball-button">
-      <div className='pokeball-button-inner'></div>
-    </div>
-  </div>
-}
-
 function App() {
   const [loading, setLoading] = useState(true);
 
   return (
     <PokedexDeviceLoadingContext.Provider value={{loading, setLoading}}>
       <div className="app">
-        <DeviceLoaderPanel />
+        <PokedexCover open={!loading} click={() => setLoading(false)} />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -66,9 +41,6 @@ function App() {
       </div>
     </PokedexDeviceLoadingContext.Provider>
   );
-  /*return <>
-    <SimplePokeBall />
-  </>*/
 }
 
 export default App;

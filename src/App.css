@@ -3,101 +3,6 @@
   position: relative;
 }
 
-.device-loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 10000;
-  --pokeball-size: 200px;
-}
-
-.device-loader > * {
-  width: 100%;
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.device-loader .top {
-  top: 0;
-  left: 0;
-  right: 0;
-  height: calc(50% + 10px); /* + (var(--pokeball-size) / 20) */
-  border-bottom: 10px solid #000;
-  background: #ccc;
-  justify-content: flex-end;
-  z-index: 1;
-  transition: top 1s ease-in-out 0s;
-}
-
-.device-loader .bottom {
-  background: #ccc;
-  height: calc(50% + 0px);
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-top: 10px solid #000;
-  z-index: 0;
-  transition: bottom 1s ease-in-out 0s;
-}
-
-.device-loader .top .pokeball-upper-half {
-  width: var(--pokeball-size);
-  height: calc(var(--pokeball-size) / 2);
-  border-top-right-radius: calc(var(--pokeball-size) * 11 / 20);
-  border-top-left-radius: calc(var(--pokeball-size) * 11 / 20);
-  background: red;
-  border: calc(var(--pokeball-size) / 20) solid #000;
-  border-bottom: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.device-loader .pokeball-button {
-  border-radius: 50%;
-  background: white;
-  z-index: 10;
-  border: calc(var(--pokeball-size) / 20) solid #000;
-  width: calc(var(--pokeball-size) * 8 / 20);
-  height: calc(var(--pokeball-size) * 8 / 20);
-  margin-bottom: calc(var(--pokeball-size) * -4 / 19);
-}
-
-.device-loader .bottom .pokeball-lower-border {
-  height: 5px;
-  width: 100%;
-  background: black;
-}
-
-.device-loader .bottom .pokeball-lower-half {
-  margin-top: -5px;
-  width: var(--pokeball-size);
-  height: calc(var(--pokeball-size) / 2);
-  border-bottom-left-radius: calc(var(--pokeball-size) * 11 / 20);
-  border-bottom-right-radius: calc(var(--pokeball-size) * 11 / 20);
-  background: white;
-  border: calc(var(--pokeball-size) / 20) solid #000;
-  border-top-width: 0;
-  /* if we add border top then black line appears */
-  /* border-top: calc(var(--pokeball-size) / 40) solid #000; */
-}
-
-
-
-.device-loader.animation .top {
-  top: -150px;
-}
-
-.device-loader.animation .bottom {
-  bottom: -100px;
-}
-
 /*
 
 .device-loader.animation .bottom .pokeball-lower-half {
@@ -160,6 +65,12 @@
   border-radius: 50%;
   border: 2px solid black;
 }
+*/
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -190,5 +101,3 @@
     transform: rotate(360deg);
   }
 }
-
-*/
