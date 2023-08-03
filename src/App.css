@@ -71,13 +71,14 @@
   margin: -5px auto 0;
   width: var(--pokeball-size);
   height: calc(var(--pokeball-size) / 2);
-  border-bottom-right-radius: calc(var(--pokeball-size) * 11 / 20);
   border-bottom-left-radius: calc(var(--pokeball-size) * 11 / 20);
+  border-bottom-right-radius: calc(var(--pokeball-size) * 11 / 20);
   background: white;
-  border: calc(var(--pokeball-size) / 20) solid #000;
+  border: 10 solid #000; /* background: white;*/
+  padding: 10px;
+
   border-top: calc(var(--pokeball-size) / 40) solid #000;
 }
-
 
 .device-loader.animation .top {
   top: -100px;
