@@ -23,7 +23,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: calc(50% + 10px); /* + (var(--pokeball-size) / 20) */
+    height: calc(50% + (var(--pokeball-size) / 20));
     border-bottom: 10px solid #000;
     background: #ccc;
     justify-content: flex-end;
@@ -77,8 +77,14 @@
     border: 2px solid #ccc;
   }
 
+  @keyframes blink {
+    0%, 20%, 80%, 100% { background: #ccc; border: #ccc;}
+    50% { background: #ff7768; border: #ff7768; }
+  }
+
   .pokedex-cover .pokeball-button:hover .pokeball-button-inner {
     background: #ccc;
+    animation: blink 5s infinite alternate 2.5s;
   }
   
   .pokedex-cover .bottom .pokeball-lower-border {
