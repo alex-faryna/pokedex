@@ -12,11 +12,15 @@
 .pokemon-list-container {
     width: 100%;
     max-width: 1000px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    display: grid; 
+    /* auto-fill,auto-fit */
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
+
+    scroll-snap-type: y mandatory;
 }
 
 .pokemon-list-item {
+    margin: 0 auto;
     max-width: 250px;
     width: 100%;
     display: flex;
