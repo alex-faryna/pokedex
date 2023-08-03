@@ -22,7 +22,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: calc(50% + 5px); /* + (var(--pokeball-size) / 20) */
+  height: calc(50% + 10px); /* + (var(--pokeball-size) / 20) */
   border-bottom: 10px solid #000;
   background: #ccc;
   display: flex;
@@ -38,7 +38,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  border-top: 5px solid #000;
+  border-top: 10px solid #000;
   transition: bottom 1s ease-in-out 0.05s;
 }
 
@@ -75,7 +75,7 @@
   border-bottom-left-radius: calc(var(--pokeball-size) * 11 / 20);
   background: white;
   border: calc(var(--pokeball-size) / 20) solid #000;
-  border-top: none;
+  border-top: calc(var(--pokeball-size) / 40) solid #000;
 }
 
 
@@ -85,12 +85,11 @@
 
 .device-loader.animation .bottom {
   bottom: -100px;
-  border-top: 10px solid #000;
 }
 
-.device-loader.animation .bottom .pokeball-lower-half {
+/*.device-loader.animation .bottom .pokeball-lower-half {
   border-top: calc(var(--pokeball-size) / 40) solid #000;
-}
+}*/
 
 
 /*
