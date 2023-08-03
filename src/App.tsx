@@ -6,7 +6,7 @@ import { PokedexCover } from './components/pokedex-cover/pokedex-cover';
 import { Pokedex } from './components/pokedex/pokedex';
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   return (
     <PokedexCoverContext.Provider value={{loading, setLoading}}>

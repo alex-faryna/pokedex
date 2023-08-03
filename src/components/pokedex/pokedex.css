@@ -2,4 +2,33 @@
     background: #ccc;
     width: 100vw;
     height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    align-items: center
+}
+
+.pokemon-list-container {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.pokemon-list-item {
+    max-width: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    border: 1px solid red;
+
+}
+
+.pokemon-list-item img {
+    margin: auto;
+    object-fit: contain;
+    max-height: 150px;
 }
