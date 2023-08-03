@@ -28,7 +28,7 @@
     background: #ccc;
     justify-content: flex-end;
     z-index: 1;
-    transition: top 0.75s ease-out 0s;
+    transition: transform 0.75s ease-out 0s;
   }
   
   .pokedex-cover .bottom {
@@ -39,7 +39,7 @@
     right: 0;
     border-top: 10px solid #000;
     z-index: 0;
-    transition: bottom 0.75s ease-out 0s;
+    transition: transform 0.75s ease-out 0s;
   }
   
   .pokedex-cover .top .pokeball-upper-half {
@@ -84,7 +84,7 @@
 
   .pokedex-cover .pokeball-button:hover .pokeball-button-inner {
     background: #ccc;
-    animation: blink 5s infinite alternate 2.5s;
+    animation: blink 2.5s infinite alternate .5s;
   }
   
   .pokedex-cover .bottom .pokeball-lower-border {
@@ -106,9 +106,9 @@
   }
   
   .pokedex-cover.open .top {
-    top: calc(-50% - calc(var(--pokeball-size) * 8 / 20));
+    transform: translateY(-115%);
   }
   
   .pokedex-cover.open .bottom {
-    bottom: -50%;
+    transform: translateY(100%);
   }

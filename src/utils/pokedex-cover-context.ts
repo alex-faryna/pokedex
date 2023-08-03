@@ -5,7 +5,7 @@ export interface LoadingModel {
     setLoading: (val: boolean) => void;
 }
 
-export const PokedexDeviceLoadingContext = createContext<LoadingModel>({
+export const PokedexCoverContext = createContext<LoadingModel>({
     loading: false,
     setLoading: () => {}
 });

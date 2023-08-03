@@ -1,10 +1,10 @@
 import './pokedex-cover.css'
 
 export function PokedexCover({ open = false, click }: { open?: boolean, click?: () => void }) {  
-    return <div className={`pokedex-cover ${open ? 'open' : ''}`} onClick={click}>
+    return <div className={`pokedex-cover ${open ? 'open' : ''}`}>
       <div className='top'>
         <div className='pokeball-upper-half'>
-          <div className='pokeball-button'>
+          <div className='pokeball-button' onClick={click}>
             <div className='pokeball-button-inner' />
           </div>
         </div>
